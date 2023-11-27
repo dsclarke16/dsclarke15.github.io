@@ -90,18 +90,60 @@
                     Monthly: $10 per month <br>
                     Yearly: $100 per year <br>
                 </p>
-                <ol>
+                <ol id="type">
                     <input type="radio" id="monthly" name="subscription" value="monthly" checked> 
                     <label for="monthly">Monthly</label><br>
                     <input type="radio" id="yearly" name="subscription" value="yearly"> 
                     <label for="yearly">Yearly</label> <br>
                 </ol>
                 <label for="monthly-order">Months for subscription:</label>
-                <input type="number" name="montly-order" id="monthly-order"> <br>
+                <input type="number" name="montly-order" min="0" max="11" id="monthly-order"> <br>
                 <label for="yearly-order">Years for subscription:</label>
-                <input type="number" name="yearly-order" id="yearly-order">
+                <input type="number" name="yearly-order" min="0" max="10" id="yearly-order"><br>
+                <label for="total">Total:</label>
+                <input type="text" name="total" id="total" readonly>
+                <button type="button" id="calculate" name="calculate">Calculate</button>
             </fieldset>
         </form>
     </body>
 </html>
 
+<script type="module">
+
+    var monthly = document.getElementById("monthly");
+    var yearly = document.getElementById("yearly");
+    var rate;
+    var legnth;
+    document.getElementById("yearly-order").readOnly = true;
+
+calculate.addEventListener('click', (e) => 
+   {
+        if(monthly.checked){
+            rate = 10;
+            legnth = parseInt(document.getElementById("monthly-order").value);
+        }else if(yearly.checked){
+            rate = 100;
+            legnth = parseInt(document.getElementById("yearly-order").value);
+        } 
+        console.log(rate);
+
+        var total = rate * legnth;
+        console.log(total);
+        document.getElementById("total").value = "$" + total;
+   });
+
+type.addEventListener('change', (e) =>
+    {
+        document.getElementById("yearly-order").value = null;
+        document.getElementById("monthly-order").value = null;
+        document.getElementById("total").value = null;
+        if(monthly.checked){
+            document.getElementById("monthly-order").readOnly = false;
+            document.getElementById("yearly-order").readOnly = true;
+        }
+        else if(yearly.checked){
+            document.getElementById("monthly-order").readOnly = true;
+            document.getElementById("yearly-order").readOnly = false;
+        }
+    })
+</script>
