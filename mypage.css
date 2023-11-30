@@ -1,73 +1,84 @@
-<html>
-    <head>
-        <meta charset=utf-8 />
-        <title>Daniel's website</title>
-        <link rel="stylesheet" href="C:\Users\Daniel\OneDrive\Desktop\USB Folder\CSCI434\Week 3\mypage.css">
-    </head>
-  <body>
-    <h1>Welcome to my page</h1>
-    <div class="topnav">
-      <a class="active" href="C:\Users\Daniel\OneDrive\Desktop\USB Folder\CSCI434\Week 3\dclarkeWeek2.html">Home</a>
-      <a href="C:\Users\Daniel\OneDrive\Desktop\USB Folder\CSCI434\Week 3\multimedia.html">Multimedia</a>
-    </div>
-    <h2>Week 1</h2>
-    <p class="normal">
-      This website was built by Daniel Clarke while compleating CSCI434: Web Programming at Southwestern College.
-    </p>
-    <p class="normal">
-      In the course of completing this course, I will build this website along these projected objectives. 
-    </p> 
-    <p class="normal"> 
-      Week 2 Objectives: <br>
-       I will add 2 paragraphs describing myself, 3 links to websites that are related to my hobbies, <br>
-      at least two pictures relating to myself or my hobbies, and plans for future additions to my website.<br>
-    </p>
-    <p class="normal">
-      I chose github to host my repository mostly due to an element of peer pressure. In my time as a student <br>
-      and in my private time researching programming, github is the site I have seen the most frequently. 
-    </p>
-    <h2>Week 2</h2>
-    <p class="normal">
-        I am Daniel Clarke. I am a Staff Sergeant in the US Air Force. My job is to maintain the various pieces of equipment <br>
-        that is used for air traffic control. Those are things like radar, radios, and navigation aids. In my shop we have a <br>
-        slogan that is a play on the YOLO acronym: Without us, <em>you only land once</em>. 
-    </p>
-    <p class="normal">
-        That is me in my work time. In my off time, I do a lot of nerdy things. I have several dozen games that can take as <br>
-        long as 9 hours to complete or even weeks for campaign games. I am also somewhat of a chef. Not anywhere near a <br>
-        professional level, but I do all right. I recently aquired a smoker so I have been playing around with that. <br>
-        I have a labrador/australian shepherd who is a big old goober for those he loves, but a fierce guardian to <br>
-        those he does not know. 
-    </p>
-    <div class="pictures">
-        <img src="doggo.jpg" alt = "Picture of dog" height="200" width="200" />
-        <p>This is me and my dog</p>
-      </div>
-      <div class="pictures">
-        <img class="middle-img" src="steakntaters.jpg" alt="picture of steak and potatoes" height="200" width="200" />
-        <p>This is some mesquite smoked steak and taters</p>
-      </div>
-    </div>
-    <div>
-    <p>
-        Week 3 Objectives: <br>
-        I will be creating a design document that will outling a multimedia page for this website that  teaches <br>
-        a simple skill or process. This skill or process will be related to a hobby or interest of mine. I will <br>
-        modify my page further based on that living document.
-    </p>
-  </div>
-  <div class="footer">
-        <div class="footer-head">
-            <h2 class="footer-text">Interesting sites for Daniel Clarke</h2>  
-        </div>
-        <div class="footer-symbol">
-        <a target="_blank" rel="noopener noreferrer" href="https://www.miniaturemarket.com/"><img src="miniature-market-logo.png" alt="miniature-market-logo"></a>
+body {
+            
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  div.pictures {
+    display:inline-block;
+  }
+  h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid #57b1dc;
+    morgin-top: 30px;
+  }
+  h2 {
+    color: #d1633c;
+    font-size: 1em;
+  }
+  .footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .footer-text{
+    text-align: center;
+    background-color: #f6f9fa;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 100%;
+  }
+  footer.footer-head {
+    width: 100%;
+  }
+  
+  .footer-symbol {
+    padding: 2rem 3rem;
+    background-color: #f6f9fa;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+  /* Add a black background color to the top navigation */
+.topnav {
+position: relative;
+background-color: #970505;
+overflow: hidden;
+}
 
-        <a target="_blank" rel="noopener noreferrer" href="https://www.tcgplayer.com/"><img src="TCGplayer-logo-primary@2x.png" alt="TCGplayer-logo"></a>
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
 
-        <a target="_blank" rel="noopener noreferrer" href="https://www.crunchyroll.com/"><img src="Crunchyroll-Emblem-700x394.png" alt="TCGplayer-logo"></a>
-        
-    </div>
-  </div>
-  </body>
-</html>
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #585a59;
+color: rgb(0, 0, 0);
+}
+.video{
+  display: inline-flex;
+}
+.global-setup{
+  width: 500px;
+  display: inline-block;
+  flex-direction: row;
+}
