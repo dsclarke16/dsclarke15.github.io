@@ -89,6 +89,8 @@
                     Subscriptions: <br>
                     Monthly: $10 per month <br>
                     Yearly: $100 per year <br>
+                    Discount: <br>
+                    5+ years = 20% off <br>
                 </p>
                 <ol id="type">
                     <input type="radio" id="monthly" name="subscription" value="monthly" checked> 
@@ -122,8 +124,13 @@ calculate.addEventListener('click', (e) =>
             rate = 10;
             legnth = parseInt(document.getElementById("monthly-order").value);
         }else if(yearly.checked){
-            rate = 100;
             legnth = parseInt(document.getElementById("yearly-order").value);
+            if(legnth>5){
+                rate = 80;
+            }
+            else{
+                rate = 100;
+            }
         } 
         console.log(rate);
 
