@@ -88,11 +88,17 @@ color: rgb(0, 0, 0);
 .video{
   display: inline-flex;
 }
-.global-setup{
+.how-to{
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
-  
+}
+.global-setup{
+  background: #F6F3ED;
+  margin: 10px;
+  padding: 20px;
+  border: 1px dotted maroon;
+  width: 240px;
 }
 .global-setup p{
   background: #f2f5d5;
