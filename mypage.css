@@ -48,9 +48,7 @@ body {
   }
   /* Add a black background color to the top navigation */
 nav {
-position: relative;
 background-color: #970505;
-overflow: hidden;
 }
 
 nav ul{
