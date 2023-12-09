@@ -89,6 +89,7 @@ color: rgb(0, 0, 0);
   display: inline-flex;
 }
 #how-to{
+  display: flex;
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
