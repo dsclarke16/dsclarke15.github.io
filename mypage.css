@@ -53,6 +53,14 @@ background-color: #970505;
 overflow: hidden;
 }
 
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
 /* Style the links inside the navigation bar */
 nav ul li a {
 color: #f2f2f2;
@@ -60,8 +68,10 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-size: 17px;
-display: flex;
-justify-content: center;
+display: block;
+border: 1px solid;
+border-radius: .5em;
+padding: .5em, 1em;
 margin: .5em;
 }
 
