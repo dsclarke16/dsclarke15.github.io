@@ -47,14 +47,14 @@ body {
     width: 100%;
   }
   /* Add a black background color to the top navigation */
-.topnav {
+nav {
 position: relative;
 background-color: #970505;
 overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+nav ul li a {
 color: #f2f2f2;
 text-align: center;
 padding: 14px 16px;
@@ -66,13 +66,13 @@ margin: .5em;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+nav ul li a:hover {
 background-color: #ddd;
 color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+nav ul li a.active {
 background-color: #585a59;
 color: rgb(0, 0, 0);
 }
