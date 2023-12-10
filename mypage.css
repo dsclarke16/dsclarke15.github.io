@@ -101,6 +101,9 @@ color: rgb(0, 0, 0);
   border: 1px dotted #970505;
   width: 240px;
 }
+.global-setup a{
+  justify-content: center;
+}
 
 .normal{
   width: 900px;
